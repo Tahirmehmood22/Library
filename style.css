@@ -1,0 +1,212 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+input,
+button,
+select,
+dialog,
+option {
+  font: inherit;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(
+    150deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(281deg 100% 21%) 25%,
+    hsl(304deg 100% 23%) 42%,
+    hsl(319deg 100% 30%) 55%,
+    hsl(329deg 100% 36%) 66%,
+    hsl(336deg 100% 41%) 75%,
+    hsl(346deg 83% 51%) 83%,
+    hsl(3deg 95% 61%) 89%,
+    hsl(17deg 100% 59%) 94%,
+    hsl(30deg 100% 55%) 97%,
+    hsl(40deg 100% 50%) 99%,
+    hsl(48deg 100% 50%) 100%,
+    hsl(55deg 100% 50%) 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  font-weight: bold;
+  align-items: center;
+  box-shadow: 2px 2px 5px whitesmoke;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.add-new-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.add-button {
+  padding: 10px;
+  border-radius: 20px;
+  width: 150px;
+  background-color: black;
+  color: gray;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(105, 23, 23);
+  color: whitesmoke;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* dialog box container */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#dialog {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(18, 18, 2);
+  color: gray;
+  gap: 20px;
+}
+
+.close-icon {
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.input-container input {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.include-button {
+  padding: 10px;
+  border-radius: 20px;
+  width: 150px;
+  background-color: gray;
+  color: black;
+  font-weight: bold;
+}
+
+.books-list-container {
+  margin: 20px auto;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  color: gray;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.read-status-container {
+  background-color: gray;
+  width: 30%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  transition: transform 0.2s ease-in;
+}
+
+.read-status-container:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.delete-button-container {
+  display: flex;
+  justify-content: end;
+  transition: transform 0.2s ease-in;
+  transform-origin: right;
+}
+
+.delete-button-container:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+@media only screen and (min-width: 500px) {
+  #dialog {
+    width: 400px;
+  }
+
+  dialog {
+    top: 10%;
+  }
+}

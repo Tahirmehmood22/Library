@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is an app to store data about books you have read or are willing to read "
+    />
+    <title>Library App for Odin Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Tahir's Library</h1>
+
+      <figure>
+        <img src="books.jpg" alt="books" width="100" height="100" />
+      </figure>
+    </header>
+    <main>
+      <section class="add-new-content">
+        <div class="add-button-container">
+          <button type="button" class="add-button">Add +</button>
+        </div>
+
+        <dialog>
+          <div id="dialog">
+            <div class="close-icon">
+              <i class="fa-solid fa-square-xmark close-button" autofocus></i>
+            </div>
+            <form>
+              <div class="input-container">
+                <label for="book-name">Name of the Book</label>
+                <input type="text" name="book-name" id="book-name" required />
+              </div>
+              <div class="input-container">
+                <label for="author-name">Name of the author</label>
+                <input
+                  type="text"
+                  name="author-name"
+                  id="author-name"
+                  required
+                />
+              </div>
+              <div class="input-container">
+                <label for="pages">Number of pages</label>
+                <input type="number" min="0" name="pages" id="pages" required />
+              </div>
+              <div class="input-container">
+                <label for="read-status">Have you read this Book?</label>
+                <select name="read-status" id="read-status">
+                  <option value="Read">Read</option>
+                  <option value="Not Read">Not Read</option>
+                </select>
+              </div>
+              <div class="add-button-container">
+                <button type="submit" class="include-button">Add +</button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+      </section>
+      <section class="books-list-container"></section>
+    </main>
+  </body>
+</html>
+
+<!-- <div class="card">
+  <p>Book: narnia</p>
+  <p>Author: cs.lewis</p>
+  <p>Pages: 297</p>
+  <div class="read-status-container">
+    <p>Read</p>
+  </div>
+  <div class="delete-button-container">
+    <i class="fa-solid fa-trash delete-button"></i>
+  </div>
+</div>; -->
